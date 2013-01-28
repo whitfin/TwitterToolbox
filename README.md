@@ -2,7 +2,7 @@ TwitterToolbox
 ==============
 A collection of customisations which can be enabled or disabled on Twitter.
 
-Very buggy right now, especially the whole localStorage stuff.
+Very buggy right now, especially the whole localStorage stuff. Some files are outdated since this project is a consolidation of several other projects and need changing.
 
 This code is protected via the default GitHub copyright license such that:
 
