@@ -1,6 +1,6 @@
 var logging = false;
 
-//sets the item in the localstorage
+// Sets the item in the localstorage
 function setItem(key, value) {
     try {
         log("Inside setItem:" + key + ":" + value);
@@ -13,7 +13,7 @@ function setItem(key, value) {
     log("Return from setItem" + key + ":" + value);
 }
 
-//Gets the item from local storage with the specified key
+// Gets the item from local storage with the specified key
 function getItem(key) {
     var value;
     log('Get Item:' + key);
@@ -28,7 +28,7 @@ function getItem(key) {
     return value;
 }
 
-//Clears all the key value pairs in the local storage
+// Clears all the key pairs in the local storage
 function clearStrg() {
     log('about to clear local storage');
     window.localStorage.clear();
@@ -49,6 +49,7 @@ chrome.extension.onMessage.addListener(function (request, sender, sendResponse) 
             sendResponse({
                 WTF: localStorage["showWTF"],
                 TRENDS: localStorage["showTRENDS"],
+		PROMO: localStorage["showPROMOTE"],
                 FHEAD: localStorage["fullHEAD"],
                 RHEAD: localStorage["removeHEAD"]
             });

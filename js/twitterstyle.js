@@ -6,6 +6,7 @@ chrome.extension.sendMessage({
 function (response) {
     var showWTF = response.WTF;
     var showTRENDS = response.TRENDS;
+    var showPROMOTE = response.PROMO;
     var fullHEAD = response.FHEAD;
     var removeHEAD = response.RHEAD;
 
@@ -16,6 +17,7 @@ function (response) {
     if (showWTF == undefined || showTRENDS == undefined) {
         showWTF = defaultSetting;
         showTRENDS = defaultSetting;
+	showPROMOTE = defaultSetting;
         fullHEAD = defaultSetting;
         removeHEAD = defaultSetting;
     }
@@ -29,7 +31,6 @@ function (response) {
     // Inject style for hiding Who To Follow 
     if (showWTF == "hide") {
         tstyle.appendChild(document.createTextNode(".wtf-module{display:none !important;}"));
-
     }
 
     // Inject style for hiding Trends
@@ -37,11 +38,18 @@ function (response) {
         tstyle.appendChild(document.createTextNode(".trends{display:none !important;}"));
     }
 
+    // Inject style for hiding Promotions
+    if (showPROMOTE == "hide") {
+	tstyle.appendChild(document.createTextNode(".promo {display:none !important;}.definition {display:none !important;}.component .definition + hr {display:none !important;}.promoted-trend, .promoted-account, .promoted-tweet {display:none !important;}"));
+    }
+
+    // Inject style for extending Header
     if (fullHEAD == "show") {
         waitForKeyElements(".dashboard", moveSelectDivs);
         tstyle.appendChild(document.createTextNode(".profile-card.profile-header {width:100% !important;}.profile-card.profile-header .profile-header-inner {background-size:100% !important;}.profile-header-inner-overlay {width:100% !important;}"));
     }
 
+    // Inject style for removing Header
     if (removeHEAD == "show") {
         tstyle.appendChild(document.createTextNode(".profile-card.profile-header .profile-header-inner {display:none !important;}.profile-card.profile-header {background-color:white !important;}"));
     }
