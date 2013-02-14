@@ -16,7 +16,7 @@ function loadOptions() {
 
     // Set up the defaults if no values are present in LocalStorage
     // Needs finishing/rewriting
-    if (showWTF == undefined || showTRENDS == undefined) s {
+    if (showWTF == undefined || showTRENDS == undefined){
         // if undefined, set to defaults
         background.setItem("showWTF", defaultSetting);
         background.setItem("showTRENDS", defaultSetting);
