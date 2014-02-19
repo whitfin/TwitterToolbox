@@ -1,12 +1,10 @@
-/* Options.CSS */
-
-body{
+body {
 	background-color:#ebeff9;
 	font-family:arial,sans-serif;
 	font-size:13px
 }
 
-#content{
+#content {
 	background-color:#ffffff;
 	border-color:#b5c7de;
 	border-style:solid;
@@ -17,36 +15,36 @@ body{
 	-webkit-border-radius:12px
 }
 
-h1{
+h1 {
 	color:#333333;
 	font-size:1.5em;
 	margin:0.7em 0 0;
 	text-align:center
 }
 
-.option_row{
+.option_row {
 	clear:left;
 	padding: 5px;
 }
 
-.option_name{
+.option_name {
 	float:left;
 	font-weight:bold;
 	margin-top:3px;
 	width:15em
 }
 
-.option_picker{
+.option_picker {
 	float:right
 }
 
-.buttons{
+.buttons {
 	clear:left;
 	padding:5px;
 	text-align: center;
 }
 
-#save_status{
+#save_status {
 	background-color:#fff1a8;
 	font-weight:bold;
 	margin-left:10px;
@@ -55,15 +53,17 @@ h1{
 	-webkit-border-radius:3px
 }
 
-.footer{
+.footer {
 	text-align:center;
 	margin-top:0.4em
 }
 
-#msg{
-	background: #090;
+#msg {
+	background: #ebeff9;
+	border-color: #b5c7de;
+	border-style: solid;
 	-webkit-border-radius: 5px 5px;
-	color: #fff;
+	color: #000;
 	font-weight: bold;
 	padding: 5px;
 	text-align: center;

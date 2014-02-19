@@ -1,7 +1,7 @@
 var logging = false;
 
 // Sets the item in the localstorage
-function setItem(key, value) {
+function setItem(key, value){
     try {
         log("Inside setItem:" + key + ":" + value);
         window.localStorage.removeItem(key);
@@ -14,7 +14,7 @@ function setItem(key, value) {
 }
 
 // Gets the item from local storage with the specified key
-function getItem(key) {
+function getItem(key){
     var value;
     log('Get Item:' + key);
     try {
@@ -29,29 +29,31 @@ function getItem(key) {
 }
 
 // Clears all the key pairs in the local storage
-function clearStrg() {
+function clearStrg(){
     log('about to clear local storage');
     window.localStorage.clear();
     log('cleared');
 }
 
-function log(txt) {
-    if (logging) {
+// Logs to the console if logging is enabled
+function log(txt){
+    if(logging){
         console.log(txt);
     }
 }
 
-chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
+chrome.extension.onMessage.addListener(function(request, sender, sendResponse){
     chrome.pageAction.show(sender.tab.id);
-    switch (request.name) {
+    switch(request.name){
         case "getPreferences":
             // request from the content script to get the preferences.
             sendResponse({
-                WTF: localStorage["showWTF"],
-                TRENDS: localStorage["showTRENDS"],
-		PROMO: localStorage["showPROMOTE"],
-                FHEAD: localStorage["fullHEAD"],
-                RHEAD: localStorage["removeHEAD"]
+                "whoToFollow": localStorage["whoToFollow"],
+                "trends": localStorage["trends"],
+                "photos": localStorage["photos"],
+                "promo": localStorage["promo"],
+                "full-header": localStorage["full-header"],
+                "remove-header": localStorage["remove-header"]
             });
             break;
         default:
@@ -65,5 +67,4 @@ chrome.pageAction.onClicked.addListener(function (tab) {
         selected: true,
         url: url
     });
-
 });
