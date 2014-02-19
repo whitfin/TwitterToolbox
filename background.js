@@ -48,12 +48,12 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse){
         case "getPreferences":
             // request from the content script to get the preferences.
             sendResponse({
-                "whoToFollow": localStorage["whoToFollow"],
-                "trends": localStorage["trends"],
+                "full-header": localStorage["full-header"],
                 "photos": localStorage["photos"],
                 "promo": localStorage["promo"],
-                "full-header": localStorage["full-header"],
-                "remove-header": localStorage["remove-header"]
+                "trends": localStorage["trends"],
+                "remove-header": localStorage["remove-header"],
+                "whoToFollow": localStorage["whoToFollow"]
             });
             break;
         default:
