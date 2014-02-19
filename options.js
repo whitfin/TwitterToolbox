@@ -19,6 +19,9 @@ function saveOptions() {
     background.setItem("trends", document.getElementById("trends").value);
     background.setItem("whoToFollow", document.getElementById("whotofollow").value);
     document.getElementById("msg").style.visibility = "visible";
+    chrome.tabs.getSelected(null, function(tab) {
+        chrome.tabs.reload(tab.id);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -2,10 +2,9 @@ TwitterToolbox
 ==============
 A collection of customisations which can be enabled or disabled on Twitter.
 
-Now available for use, and reliable. You can get a compiled Chrome extension from the [Store](https://chrome.google.com/webstore/detail/zackehhs-twitter-toolbox/akigidnfaadplbagdcahkhajlignocfh "Twitter Toolbox"). 
+Now available for use, and reliable. You can get a compiled Chrome extension from the [Store](https://chrome.google.com/webstore/detail/zackehhs-twitter-toolbox/akigidnfaadplbagdcahkhajlignocfh "Twitter Toolbox").
 
-[![Twitter Toolbox](http://cl.ly/image/3f3O403X161b/twitter-toolbox.png)](http://cl.ly/image/3f3O403X161b/twitter-toolbox.png)
-
+[![Twitter Toolbox](http://cl.ly/image/0R453l473L0O/twitter-tools.png)](http://cl.ly/image/0R453l473L0O/twitter-tools.png)
 
 This code is protected via the default GitHub copyright license such that:
 
