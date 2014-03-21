@@ -51,8 +51,9 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse){
                 "full-header": localStorage["full-header"],
                 "photos": localStorage["photos"],
                 "promo": localStorage["promo"],
-                "trends": localStorage["trends"],
                 "remove-header": localStorage["remove-header"],
+                "show-tweets": localStorage["show-tweets"],
+                "trends": localStorage["trends"],
                 "whoToFollow": localStorage["whoToFollow"]
             });
             break;

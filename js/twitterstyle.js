@@ -45,4 +45,9 @@ chrome.extension.sendMessage({
     if(response["remove-header"] == "true"){
         insert(".profile-card.profile-header .profile-header-inner {display:none !important;}.profile-card.profile-header {background-color:white !important;}");
     }
+    // Extend Tweet number
+    if(response["show-tweets"] == "true"){
+        var tweets = document.querySelector('a[data-element-term="tweet_stats"] strong');
+        tweets.innerHTML = tweets.title;
+    }
 });
